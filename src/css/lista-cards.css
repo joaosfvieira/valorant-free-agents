@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import "compass/css3";
+
+.players
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*max-width: 1440px;*/
+    flex-wrap: wrap;
+    z-index: 1;
+    /*margin-top: 80px;*/
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.players .cardMasc
+{
+    position: relative;
+    width: 200px;
+    height: 350px;
+    margin: 30px;
+    box-shadow: 5px 5px 25px #000;
+    border-radius: 15px;
+    background-image: url('../assets/img/npp.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.players .cardMasc .content
+{
+    display: grid;
+    background-color: #FF4655;
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.players .cardMasc:hover .content
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.players .cardMasc .content h2
+{
+    position: absolute;
+    top: -80px;
+    left: 30px;
+    font-size: 4em;
+    color: rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+}
+
+.players .cardMasc .content h3
+{
+    font-size: 1.2em;
+    color: #fff;
+    z-index: 1;
+}
+
+.players .cardMasc .content p
+{
+    font-size: 0.8em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.players .cardMasc .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 2px 2px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.2);
+}
+
+
+
+.players .cardMasc .content p span
+{
+    color:#FF4655;
+    font-weight: 700;
+}
+
+
+@media(max-width: 1000px)
+{
+    .players
+    {
+        margin-top: 80px;
+    }
+
+}
+

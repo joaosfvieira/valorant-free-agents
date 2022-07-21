@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free Agents do Brasil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script type="text/javascript" src="../js/login.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="./index.html" ><img src="../assets/img/logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./lista-cards.html">Jogadores</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./cadastro.html">Cadastre-se</a></li>
+                <li><a href="./edita-perfil.html">Editar Perfil</a></li>
+            </ul>
+        </header>
+
+            
+        <div class="content">
+            <div class="textBox">
+                <form action="" style="border:1px solid #ccc">
+                    <div class="container">
+                        <h1>Login</h1>
+                        <hr>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Insira seu Email" id="email" name="email" required>
+                    
+                        <label for="senha"><b>Senha</b></label>
+                        <input type="password" placeholder="Insira sua Senha" id="senha" name="senha" required>
+
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar de mim
+                    
+                        <div class="clearfix">
+                        <button type="submit" onclick="realizaLogin()" class="signupbtn">Entrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <footer class=" text-center text-white" style="background-color:#111;">
+        <div class="text-center p-3" style="background-color: #111">
+            © 2022 Copyright:
+            <a class="text-white" href="https://github.com/joaosfvieira">github.com/joaosfvieira</a>
+        </div>
+    </footer>
+</body>
+</html>

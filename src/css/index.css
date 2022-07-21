@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import "compass/css3";
+
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container .cardMasc
+{
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin: 30px;
+    box-shadow: 10px 10px 25px rgb(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-image: url('../assets/img/forsaken.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.container .cardMasc .content
+{
+    display: grid;
+    background-color: #2C3F52;
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .cardMasc:hover .content
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .cardMasc .content h2
+{
+    position: absolute;
+    top: -80px;
+    left: 30px;
+    font-size: 8em;
+    color: rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+}
+
+.container .cardMasc .content h3
+{
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+}
+
+.container .cardMasc .content p
+{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.container .cardMasc .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.2);
+}
+
+.container .cardMasc .content p span
+{
+    color:#FF4655;
+    font-weight: 700;
+}
+
+.container .cardFem
+{
+    background: #fff;
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin: 30px;
+    box-shadow: 10px 10px 25px rgb(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-image: url('../assets/img/mary.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.container .cardFem .content
+{
+    display: grid;
+    background-color: #2C3F52;
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .cardFem:hover .content
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .cardFem .content h2
+{
+    position: absolute;
+    top: -80px;
+    left: 30px;
+    font-size: 8em;
+    color: rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+}
+
+.container .cardFem .content h3
+{
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+}
+
+.container .cardFem .content p
+{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.container .cardFem .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.2);
+}
+
+.container .cardFem .content p span
+{
+    color:#FF4655;
+    font-weight: 700;
+}

@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import "compass/css3";
+
+/* #2C3F52 grey
+   #fff white
+   #FF4655 red
+*/
+
+* 
+{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-width: 585px;
+}
+
+section 
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF4655;
+    background-image: url("../assets/img/wpp.png");
+    
+}
+
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(48, 48, 48);
+}
+
+header .logo
+{
+    position: relative;
+    max-width: 60px;
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    color: #FF4655;
+    /* transform: translateY(-5px); */
+    transition: 0.25s;
+}
+
+.content
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content .textBox
+{
+    margin-top: 30px;
+    position: relative;
+    max-width: 600px;
+}
+
+.content .textBox h2
+{
+    color: #333;
+    font-size: 3.7em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .textBox h2 span
+{
+    color: #FF4655;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content .textBox p
+{
+    color: #333;
+}
+
+.content .textBox a
+{
+    display: inline-block;
+    color: #FF4655;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+/* Agents */
+.content .imgBox 
+{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+    transition: 0.5;
+}
+
+.content .imgBox img
+{
+    max-width: 700px;
+    max-height: 850px;
+    margin-right: -50px;
+}
+
+/* Form */
+
+.content form{
+    margin-top: 30px;
+    box-sizing: border-box
+}
+
+.content form input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.content form input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.content form hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.content form button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #2C3F52;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    opacity: 0.9;
+    border: none;
+}
+
+.content form button:hover {
+    opacity:1;
+}
+
+.content form .signupbtn {
+    float: left;
+    width: 100%;
+}
+
+.content form .container {
+    padding: 16px;
+}
+
+.content form .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
+    }
+}
+
+
+@media(max-width: 1000px)
+{
+header
+{
+    padding: 20px;
+}
+
+header .logo
+{
+    max-width: 60px;
+}
+
+header ul
+{
+    display: none;
+}
+
+.toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(../assets/img/menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+}
+
+.toggle.active {
+    position: fixed;
+    right: 20px;
+    background: url(../assets/img/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 11;
+}
+
+header ul.navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(48, 48, 48);
+    z-index: 10;
+}
+
+header ul li a 
+{
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 5px 0;
+    text-decoration: none;
+    color:#fff;
+}
+
+section {
+    padding: 20px 20px 120px;
+}
+.content {
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.content .textbox h2 
+{
+    font-size: 2.5em;
+}
+
+.content .textBox
+{
+    max-width: 100%;
+}
+
+.content .imgBox
+{
+    max-width: 100%;
+    justify-content: center;
+}
+
+.content .imgBox img 
+{
+    max-width: 400px;
+}
+
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Agents do Brasil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/lista-cards.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/9a453f0dcf.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+  <section>
+      <header>
+          <a href="./index.html" ><img src="../assets/img/logo.png" class="logo"></a>
+          <div class="toggle" onclick="toggleMenu();"></div>
+          <ul class="navigation">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./lista-cards.html">Jogadores</a></li>
+              <li><a href="./login.html">Login</a></li>
+              <li><a href="./cadastro.html">Cadastre-se</a></li>
+              <li><a href="./edita-perfil.html">Editar Perfil</a></li>
+          </ul>
+      </header>
+      <button onclick="masc();">Masc</button>
+      <button onclick="fem();">Fem</button>
+      <div class="players"></div> 
+
+
+  </section>
+
+  <footer class=" text-center text-white" style="background-color:#111;">
+    <div class="text-center p-3" style="background-color: #111">
+      © 2022 Copyright:
+      <a class="text-white" href="https://github.com/joaosfvieira">github.com/joaosfvieira</a>
+    </div>
+  </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    players();
+  });
+  let cards = document.getElementsByClassName("players")[0];
+  let players = async () => {
+    const response = await fetch('http://localhost:3100/api/jogadores');
+    const myJson = await response.json(); 
+    console.log(myJson);
+
+    for(var i = 0; i < myJson.length; i++) {
+      if(sessionStorage.getItem("cenario-selecionado") == 'm'){
+        if(myJson[i].sexo == 'm'){
+          let div = document.createElement("div");
+          div.classList.add("cardMasc");
+          div.style.backgroundImage = 'url(' +'..'+myJson[i].profilePic+')';
+          div.innerHTML = "<div class='content'><h3>" + myJson[i].nickName + "</h3>" + "<p>" + myJson[i].role + "</p>" + "<button class='btn-player' onclick='expand()' >Mais sobre o jogador</button></div>";
+          cards.appendChild(div);
+        }
+      }
+      else if(myJson[i].sexo == 'f'){
+        let div = document.createElement("div");
+        div.classList.add("cardMasc");
+        div.style.backgroundImage = 'url(' +'..'+myJson[i].profilePic+')';
+        div.innerHTML = "<div class='content'><h3>" + myJson[i].nickName + "</h3>" + "<p>" + myJson[i].role + "</p>" + "<button class='btn-player' onclick='expand()' >Mais sobre a jogadora</button></div>";
+        cards.appendChild(div);
+      }
+  }
+  }
+</script>
+</body>
+</html>

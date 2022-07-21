@@ -1,0 +1,29 @@
+form{
+    border:1px solid #ccc;
+}
+.textBox{
+    background: #fff;
+    border-radius: 8px;
+}
+.container{
+    display: inline-grid;
+}
+
+.signupbtn{
+    width: max-content;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #2C3F52;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    opacity: 0.9;
+    border: none;
+}
+
+.signupbtn:hover {
+    opacity: 1;
+}

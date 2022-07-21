@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import "compass/css3";
+
+.content
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.content .textBox
+{
+    margin-top: 30px;
+    max-width: 600px;
+    margin:auto;
+}
+
+.content form{
+    margin-top: 30px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.content form input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #a7a4a4;
+}
+
+.content form input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.content form hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.content form button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #2C3F52;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    opacity: 0.9;
+    border: none;
+}
+
+.content form button:hover {
+    opacity:1;
+}
+
+.content form .signupbtn {
+    float: left;
+    width: 100%;
+}
+
+.content form .container {
+    padding: 16px;
+}
+
+.content form .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
